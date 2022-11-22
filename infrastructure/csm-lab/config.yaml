@@ -1,7 +1,7 @@
 - username: "admin"
   password: "Dell!2022"
   systemID: "394a9c0419757c0f"
-  endpoint: "https://10.156.10.15"
+  endpoint: "https://10.156.10.16"
   skipCertificateValidation: true 
   mdm: "10.157.10.32,10.158.10.32,10.159.10.32,10.160.10.32"
   isDefault: true
