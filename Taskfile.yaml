@@ -1,0 +1,35 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  NAME: infrastructure
+  #  NAME: gitops-demo
+  CLUSTER: csm-lab
+  BRANCH: main
+  USER: coulof
+  NS: powerflex
+
+tasks:
+  flux:bootstrap:http:
+    desc: bootstrap cluster with vanilla flux for infrastructure
+    cmds:
+      - |
+        flux bootstrap github \
+             --log-level debug \
+             --owner=coulof \
+             --repository=fluxcd-csm-powerflex \
+             --path=clusters/{{ .CLUSTER }} \
+             --personal
+
+  flux:cleanup:flux:
+    desc: remove flux
+    cmds:
+      - |
+        flux uninstall -s --namespace=flux-system
+# echo -n | openssl s_client -connect eos2git.cec.lab.emc.com:443 -servername eos2git | openssl x509 > eos2git.cert
+  flux:cleanup:ns:
+    desc: remove flux
+    cmds:
+      - kubectl delete all --all -n {{ .NS }}
+      - kubectl delete ns {{ .NS }}
