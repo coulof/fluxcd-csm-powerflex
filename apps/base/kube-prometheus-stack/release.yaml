@@ -24,12 +24,21 @@ spec:
       enabled: false
     prometheus:
       prometheusSpec:
-        retention: 24h
-        resources:
-          requests:
-            cpu: 200m
-            memory: 200Mi
-        podMonitorNamespaceSelector: {}
-        podMonitorSelector:
-          matchLabels:
-            app.kubernetes.io/component: monitoring
+        storageSpec:
+          volumeClaimTemplate:
+            spec:
+              storageClassName: powerflex
+              accessModes: ["ReadWriteOnce"]
+              resources:
+                requests:
+                  storage: 10Gi
+            selector: {}
+        additionalScrapeConfigs:
+        - job_name: 'karavi-metrics-csi-powerflex'
+          scrape_interval: 5s
+          scheme: https
+          static_configs:
+            - targets: ['otel-collector.powerflex.kubernetes.svc:8443']
+          tls_config:
+            insecure_skip_verify: true
+        retention: 1m

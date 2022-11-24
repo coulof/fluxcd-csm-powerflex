@@ -1,0 +1,4 @@
+karaviMetricsPowerstore:
+  enabled: false
+karaviMetricsPowerscale:
+  enabled: false

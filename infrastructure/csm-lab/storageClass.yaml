@@ -13,5 +13,3 @@ provisioner: csi-vxflexos.dellemc.com
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
 allowVolumeExpansion: true
----
-

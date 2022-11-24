@@ -4,6 +4,7 @@ resources:
   - ../base/cert-manager
   - ../base/csi-volumegroup-snapshotter
   - ../base/external-snapshotter
+  - ../base/csm-observability
   - ../base/powerflex
   - storageClass.yaml
 
@@ -22,5 +23,9 @@ configMapGenerator:
     namespace: flux-system
     files:
       - values.yaml=values.yaml
+  - name: csm-observability-values
+    namespace: flux-system
+    files:
+      - values.yaml=csm-obs-values.yaml
 configurations:
   - kustomizeconfig.yaml
