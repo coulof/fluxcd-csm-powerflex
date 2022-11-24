@@ -3,6 +3,8 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: dell
+  namespace: flux-system
+
 spec:
   interval: 30m
   url: https://dell.github.io/helm-charts
@@ -11,8 +13,9 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: csm-observability
+  namespace: flux-system
 spec:
-  releaseName: redis
+  releaseName: csm-observability
   chart:
     spec:
       chart: karavi-observability
