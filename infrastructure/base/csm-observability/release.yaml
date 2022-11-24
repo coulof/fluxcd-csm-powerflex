@@ -4,7 +4,6 @@ kind: HelmRepository
 metadata:
   name: dell
   namespace: flux-system
-
 spec:
   interval: 30m
   url: https://dell.github.io/helm-charts
@@ -15,6 +14,8 @@ metadata:
   name: csm-observability
   namespace: flux-system
 spec:
+  # TODO improve `targetNamespace` to be in `csm-lab` rather than here
+  targetNamespace: powerflex
   releaseName: csm-observability
   chart:
     spec:
