@@ -37,7 +37,7 @@ spec:
           scrape_interval: 5s
           scheme: https
           static_configs:
-            - targets: ['otel-collector.powerflex.kubernetes.svc:8443']
+            - targets: ['otel-collector.powerflex.svc.cluster.local:8443']
           tls_config:
             insecure_skip_verify: true
         retention: 1m
