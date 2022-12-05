@@ -32,7 +32,6 @@ spec:
               resources:
                 requests:
                   storage: 10Gi
-            selector: {}
         additionalScrapeConfigs:
         - job_name: 'karavi-metrics-csi-powerflex'
           scrape_interval: 5s
