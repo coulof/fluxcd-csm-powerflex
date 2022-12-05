@@ -18,6 +18,13 @@ secretGenerator:
     - config=config.yaml
     literals:
     - MDM=10.157.10.32,10.158.10.32,10.159.10.32,10.160.10.32
+  # TODO Improve
+  - name: vxflexos-config
+    namespace: powerflex
+    files:
+    - config=config.yaml
+    literals:
+    - MDM=10.157.10.32,10.158.10.32,10.159.10.32,10.160.10.32
 configMapGenerator:
   - name: csi-powerflex-helm-values
     namespace: flux-system
