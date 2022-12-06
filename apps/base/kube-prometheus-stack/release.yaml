@@ -44,9 +44,9 @@ spec:
             insecure_skip_verify: true
         retention: 1m
     grafana:
-    persistence:
-      type: pvc
-      enabled: true
+      persistence:
+        type: pvc
+        enabled: true
       plugins:
       - grafana-simple-json-datasource
       - briangann-datatable-panel
