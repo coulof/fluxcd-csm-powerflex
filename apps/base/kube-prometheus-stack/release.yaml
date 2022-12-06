@@ -52,7 +52,7 @@ spec:
       - briangann-datatable-panel
       - grafana-piechart-panel
       additionalDataSources:
-      - name: Karavi-Topology
+      - name: CSM-Observability-Topology
         type: grafana-simple-json-datasource
         access: proxy
         url: 'https://karavi-topology.powerflex.svc.cluster.local:8443'
