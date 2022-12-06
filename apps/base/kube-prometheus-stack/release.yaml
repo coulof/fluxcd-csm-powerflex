@@ -41,3 +41,21 @@ spec:
           tls_config:
             insecure_skip_verify: true
         retention: 1m
+    grafana:
+    persistence:
+      type: pvc
+      enabled: true
+      plugins:
+      - grafana-simple-json-datasource
+      - briangann-datatable-panel
+      - grafana-piechart-panel
+      additionalDataSources:
+      - name: Karavi-Topology
+        type: grafana-simple-json-datasource
+        access: proxy
+        url: 'https://karavi-topology.powerflex.svc.cluster.local:8443'
+        isDefault: null
+        version: 1
+        editable: true
+        jsonData:
+          tlsSkipVerify: true
