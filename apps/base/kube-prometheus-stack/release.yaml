@@ -5,6 +5,8 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
+  # needed otherwise the names will be prefixed with the ns and the default data won't scrape (cf. https://fluxcd.io/flux/components/helm/helmreleases/)
+  releaseName: kube-prometheus-stack
   targetNamespace: monitoring
   chart:
     spec:
@@ -20,7 +22,7 @@ spec:
     crds: Create
   upgrade:
     crds: CreateReplace
-  # https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/values.yaml
+  # Reference https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/values.yaml
   values:
     alertmanager:
       enabled: false
@@ -52,7 +54,7 @@ spec:
       - briangann-datatable-panel
       - grafana-piechart-panel
       additionalDataSources:
-      - name: CSM-Observability-Topology
+      - name: Karavi-Topology
         type: grafana-simple-json-datasource
         access: proxy
         url: 'https://karavi-topology.powerflex.svc.cluster.local:8443'
