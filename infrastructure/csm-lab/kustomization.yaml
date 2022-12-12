@@ -25,6 +25,14 @@ secretGenerator:
     - config=config.yaml
     literals:
     - MDM=10.157.10.32,10.158.10.32,10.159.10.32,10.160.10.32
+  - name: karavi-authorization-config
+    namespace: powerflex
+    files:
+    - config=karavi-authorization-config
+  - name: proxy-server-root-certificate
+    namespace: powerflex
+    literals:
+    - rootCertificate.pem=
 configMapGenerator:
   - name: csi-powerflex-helm-values
     namespace: flux-system
