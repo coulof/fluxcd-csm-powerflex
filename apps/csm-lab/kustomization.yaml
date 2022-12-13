@@ -4,3 +4,4 @@ commonLabels:
   stack: csm-observability
 resources:
   - ../base/kube-prometheus-stack
+#  - ../base/csm-application-mobility

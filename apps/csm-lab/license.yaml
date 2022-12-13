@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  license: kBn/MNQhh+h/mOAgAd3Rv8C1BCLythR4z+nYp9PoHu84yh/eA9eQIj68EEgaKlLUJVg+wc3H4U9X5tNhVXQCalAayu65FiDY/bc6/hvI4TksU9lmHRHz7ALtbPMd6DBUTNe4a3bkHcRZTiQUI9gGWTF0Zy9uU3sFqLzeGdyabqsCqZyK0PS3ZNP1Ov3EjW1ljxvSIHaHabtBuJ0C15QYSHQwxnD3Z9qCRxiQEgQE36QUeovpzxGbBLC5VDi/pO6JRfZFKuMcILKgmgs5Ftwvd2FjO9JH8KgjcONDNzZwczU3eQH2OMLpqTzEKbYfchqwH6t7bszhSh0wTmIPGWO4Xsv0XrXvi8yvXlYBTZd0+mx9PS43ab41/XfERY2W/FdY
+kind: Secret
+metadata:
+  name: license
+  namespace: application-mobility
