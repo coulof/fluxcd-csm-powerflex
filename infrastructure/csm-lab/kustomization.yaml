@@ -28,7 +28,7 @@ secretGenerator:
   - name: karavi-authorization-config
     namespace: powerflex
     files:
-    - config=karavi-authorization-config
+    - config=karavi-authorization-config.json
   - name: proxy-server-root-certificate
     namespace: powerflex
     literals:
