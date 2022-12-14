@@ -4,7 +4,7 @@ metadata:
   name: csi-powerflex
   namespace: flux-system
 spec:
-  interval: 3m
+  interval: 5m
   releaseName: csi-powerflex
   targetNamespace: powerflex
   chart:
