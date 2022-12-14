@@ -5,5 +5,5 @@ karaviMetricsPowerscale:
 karaviMetricsPowerflex:
   authorization:
     enabled: true
-  
+    proxyHost: csm.pflex.spoc
   
