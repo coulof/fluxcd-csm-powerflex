@@ -34,8 +34,6 @@ podmon:
 
 authorization:
   enabled: true
-  sidecarProxyImage: dellemc/csm-authorization-sidecar:v1.4.0
+  sidecarProxyImage: dellemc/csm-authorization-sidecar:v1.5.0
   proxyHost: https://csm.pflex.spoc
-
-
   skipCertificateValidation: true
