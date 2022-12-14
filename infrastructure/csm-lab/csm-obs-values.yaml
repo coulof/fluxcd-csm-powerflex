@@ -2,3 +2,8 @@ karaviMetricsPowerstore:
   enabled: false
 karaviMetricsPowerscale:
   enabled: false
+karaviMetricsPowerflex:
+  authorization:
+    enabled: true
+  
+  
