@@ -13,7 +13,7 @@ vgsnapshotter:
   image: dellemc/csi-volumegroup-snapshotter:v1.2.0
 
 podmon:
-  enabled: false
+  enabled: true
   image: dellemc/podmon:v1.3.0
   controller:
    args:
@@ -33,7 +33,7 @@ podmon:
      - "--driverPodLabelValue=dell-storage"
 
 authorization:
-  enabled: true
+  enabled: false
   sidecarProxyImage: dellemc/csm-authorization-sidecar:v1.4.0
   proxyHost: csm.pflex.spoc
   skipCertificateValidation: true
