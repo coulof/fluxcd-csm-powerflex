@@ -4,7 +4,7 @@ resources:
   - ../base/csi-volumegroup-snapshotter
   - ../base/external-snapshotter
   - ../base/powerflex
-  - patchPowerFlexRelease.yaml
+  # - patchPowerFlexRelease.yaml
   - storageClass.yaml
 
 generatorOptions:
@@ -26,3 +26,14 @@ configMapGenerator:
 
 configurations:
   - kustomizeconfig.yaml
+
+patches:
+  - target:
+      group: source.toolkit.fluxcd.io
+      version: v1beta2
+      kind: GitRepository
+      name: csi-powerflex
+    patch: |-
+      - op: replace
+        path: /spec/url
+        value: https://github.com/coulof/csi-powerflex/
