@@ -37,3 +37,7 @@ patches:
       - op: replace
         path: /spec/url
         value: https://github.com/coulof/csi-powerflex/
+      - op: replace
+        path: /spec/ref
+        value:
+          branch: main
