@@ -11,7 +11,7 @@ spec:
     spec:
 # TODO validate that path works
       chart: helm/csi-vxflexos
-      version: '2.4.0'
+      version: '2.5.0'
       reconcileStrategy: Revision
       sourceRef:
         kind: GitRepository

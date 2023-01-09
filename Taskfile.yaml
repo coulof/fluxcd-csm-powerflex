@@ -5,7 +5,7 @@ version: '3'
 vars:
   NAME: infrastructure
   #  NAME: gitops-demo
-  CLUSTER: csm-lab
+  CLUSTER: eks 
   BRANCH: main
   USER: coulof
   NS: powerflex
@@ -19,6 +19,7 @@ tasks:
              --log-level debug \
              --owner=coulof \
              --repository=fluxcd-csm-powerflex \
+             --branch={{ .CLUSTER }} \
              --path=clusters/{{ .CLUSTER }} \
              --personal
 
@@ -27,7 +28,7 @@ tasks:
     cmds:
       - |
         flux uninstall -s --namespace=flux-system
-# echo -n | openssl s_client -connect eos2git.cec.lab.emc.com:443 -servername eos2git | openssl x509 > eos2git.cert
+
   flux:cleanup:ns:
     desc: remove flux
     cmds:
