@@ -4,6 +4,7 @@ resources:
   - ../base/csi-volumegroup-snapshotter
   - ../base/external-snapshotter
   - ../base/powerflex
+  - patchPowerFlexRelease.yaml
   - storageClass.yaml
 
 generatorOptions:
