@@ -16,7 +16,7 @@ secretGenerator:
     files:
     - config=config.yaml
     literals:
-    - MDM=172.31.32.44,172.31.35.48
+    - MDM=172.31.39.97,172.31.47.106
 
 configMapGenerator:
   - name: csi-powerflex-helm-values
