@@ -1,7 +1,7 @@
 - username: "admin"
   password: "Password123"
-  systemID: "45dd43e10be9f60f"
+  systemID: "5a174f76f65d0f"
   endpoint: "https://172.31.39.156"
   skipCertificateValidation: true 
-  mdm: "172.31.41.36,172.31.32.100"
+  mdm: "172.31.32.44,172.31.35.48"
   isDefault: true
